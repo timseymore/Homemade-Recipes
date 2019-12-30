@@ -1,16 +1,13 @@
 :root {
-	--backdrop: #fff;
 	--light-blue: rgb(150,150,255);
 	--dark-blue: rgb(0, 0, 85);
 }
 
-/* Base reset */
 * {
 	margin: 0;
 	padding: 0;
 }
 
-/* box-sizing and font sizing */
 *,
 *::before,
 *::after {
@@ -19,7 +16,7 @@
 
 html {
 	box-sizing: border-box;
-	/* Set font size for easy rem calculations
+	/* 
    * default document font size = 16px, 1rem = 16px, 100% = 16px
    * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
   */
@@ -126,12 +123,33 @@ h2 {
 	height: auto;
 	display: block;
 	justify-self: center;
+	align-items: center;
 	margin: 1rem;
 	margin-bottom: 1rem;
-	text-align: center;
-	padding: 1rem;
+	padding: 0rem;
 	border-style: solid;
 	border-color: var(--light-blue);
+	border-radius: 5px;
+}
+
+.recipe-link {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	color: var(--light-blue);
+}
+
+.recipe-link:hover {
+	background-color: var(--light-blue);
+	color: var(--dark-blue);
+}
+
+.recipe-link:visited {
+	color: var(--light-blue);
+}
+
+.recipe-link:visited:hover {
+	color: var(--dark-blue);
 }
 
 #box1 {
