@@ -1,16 +1,13 @@
 :root {
-	--backdrop: #fff;
 	--light-blue: rgb(150,150,255);
 	--dark-blue: rgb(0, 0, 85);
 }
 
-/* Base reset */
 * {
 	margin: 0;
 	padding: 0;
 }
 
-/* box-sizing and font sizing */
 *,
 *::before,
 *::after {
@@ -19,33 +16,12 @@
 
 html {
 	box-sizing: border-box;
-	/* Set font size for easy rem calculations
+	/* 
    * default document font size = 16px, 1rem = 16px, 100% = 16px
    * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
   */
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-}
-
-/* 1200px / 16px = 75em */
-@media (max-width: 75em) {
-	html {
-		font-size: 60%;
-	}
-}
-
-/* 980px / 16px = 61.25em */
-@media (max-width: 61.25em) {
-	html {
-		font-size: 58%;
-	}
-}
-
-/* 460px / 16px = 28.75em */
-@media (max-width: 28.75em) {
-	html {
-		font-size: 55%;
-	}
 }
 
 body {
@@ -67,7 +43,7 @@ header {
 	height: 50px;
 	max-height: 100%;
 	margin-bottom: 15rem;
-	font-size: 1.4rem;
+	font-size: 1.9rem;
 	background-color: var(--dark-blue);
 }
 
@@ -101,8 +77,8 @@ h2 {
 	padding: 1rem 1rem;
 }
 
-.wrapper {
-	width: 100%;
+.section-wrapper {
+	width: 95%;
 	height: auto;
 	display: grid;
 	grid-template-areas:
@@ -110,6 +86,11 @@ h2 {
 		"box1 box2"
 		"box3 box4";
 	margin: 1.5rem auto 1.5rem auto;
+	border-style: solid;
+	border-radius: 5px;
+	background-color: var(--light-blue);
+	color: var(--dark-blue);
+	box-shadow: 0 20px 30px rgba(150,150,255,0.19), 0 10px 10px rgba(150,150,255,0.23);
 }
 
 .title-box {
@@ -118,6 +99,9 @@ h2 {
 	justify-self: center;
 	display: block;
 	margin: 1.5rem 0rem 0.9rem 0rem;
+	font-size: 1.8rem;
+	font-weight: 600;
+	font-style: oblique;
 }
 
 .content-box {
@@ -126,12 +110,36 @@ h2 {
 	height: auto;
 	display: block;
 	justify-self: center;
+	align-items: center;
 	margin: 1rem;
 	margin-bottom: 1rem;
-	text-align: center;
-	padding: 1rem;
+	padding: 0rem;
+	background-color: var(--dark-blue);
+	color: var(--light-blue);
 	border-style: solid;
-	border-color: var(--light-blue);
+	border-color: var(--dark-blue);
+	border-radius: 5px;
+}
+
+.recipe-link {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	color: var(--light-blue);
+	padding: 1rem;
+}
+
+.recipe-link:hover {
+	background-color: var(--light-blue);
+	color: var(--dark-blue);
+}
+
+.recipe-link:visited {
+	color: var(--light-blue);
+}
+
+.recipe-link:visited:hover {
+	color: var(--dark-blue);
 }
 
 #box1 {
@@ -151,7 +159,7 @@ h2 {
 }
 
 @media (max-width: 650px) {
-	.wrapper {
+	.section-wrapper {
 		grid-template-areas:
 			"title"
 			"box1"
