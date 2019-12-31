@@ -77,7 +77,7 @@ h2 {
 	padding: 1rem 1rem;
 }
 
-.section-wrapper {
+.container {
 	width: 95%;
 	height: auto;
 	display: grid;
@@ -159,7 +159,7 @@ h2 {
 }
 
 @media (max-width: 650px) {
-	.section-wrapper {
+	.container {
 		grid-template-areas:
 			"title"
 			"box1"
