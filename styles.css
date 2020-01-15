@@ -34,13 +34,13 @@ body {
 }
 
 header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	padding: 1rem 1rem;
 	justify-content: space-around;
 	align-items: center;
 	width: 100%;
-	height: auto;
+	height: 50px;
 	max-height: 100%;
 	margin-bottom: 15rem;
 	font-size: 1.9rem;
@@ -70,46 +70,27 @@ h2 {
 	font-weight: 300;
 }
 
-ul {
-	display: flex;
-}
-
-li {
-	display: block;
-	width: 10%vp;
-	height: auto;
-	margin-left: 50px;
-}
-
-li>a {
-	font-size: 2.2rem;
-	text-decoration: none;
-	color: var(--light-blue);
-
-}
-li>a:hover {
-	text-decoration: none;
-	color: var(--dark-blue);
-	background: var(--light-blue);
-
+.spacer {
+	width: 100%;
+	height: 50px;
+	max-height: 100%;
+	padding: 1rem 1rem;
 }
 
 .container {
-	width: 100%;
-	height: 100vh;
+	width: 95%;
+	height: auto;
 	display: grid;
-	grid-template-areas: 
+	grid-template-areas:
 		"title title"
 		"box1 box2"
-		"box3 box4"
-		"box5 box6"
-		"box7 box8";
+		"box3 box4";
 	margin: 1.5rem auto 1.5rem auto;
 	border-style: solid;
 	border-radius: 5px;
 	background-color: var(--light-blue);
 	color: var(--dark-blue);
-	
+	box-shadow: 0 20px 30px rgba(150,150,255,0.19), 0 10px 10px rgba(150,150,255,0.23);
 }
 
 .title-box {
@@ -117,14 +98,14 @@ li>a:hover {
 	grid-area: title;
 	justify-self: center;
 	display: block;
-	margin: 12rem 0rem 0.9rem 0rem;
+	margin: 1.5rem 0rem 0.9rem 0rem;
 	font-size: 1.8rem;
 	font-weight: 600;
 	font-style: oblique;
 }
 
 .content-box {
-	width: 44vw;
+	width: 46vw;
 	max-width: 100%;
 	height: auto;
 	display: block;
@@ -138,16 +119,14 @@ li>a:hover {
 	border-style: solid;
 	border-color: var(--dark-blue);
 	border-radius: 5px;
-	box-shadow: 0 20px 30px rgba(0, 0, 10, 0), 0 10px 10px rgba(1, 1, 26, 0.23);
 }
 
 .recipe-link {
 	display: block;
-	height: 100%;
 	text-decoration: none;
 	text-align: center;
 	color: var(--light-blue);
-	padding: 15rem;
+	padding: 1rem;
 }
 
 .recipe-link:hover {
