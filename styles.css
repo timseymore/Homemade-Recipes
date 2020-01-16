@@ -112,7 +112,7 @@ li {
 
 .container {
 	width: 95%;
-	height: auto;
+	height: 100vh;
 	display: grid;
 	grid-template-areas:
 		"title title"
