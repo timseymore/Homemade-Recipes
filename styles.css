@@ -34,7 +34,7 @@ body {
 }
 
 header {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	padding: 1rem 1rem;
 	justify-content: space-around;
