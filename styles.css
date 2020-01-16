@@ -45,9 +45,11 @@ header {
 	margin-bottom: 15rem;
 	font-size: 1.9rem;
 	background-color: var(--dark-blue);
+	display: flex;
 }
 
 h1 {	
+	justify-self: center;
 	color: var(--light-blue);
 }
 
@@ -70,8 +72,16 @@ h2 {
 	font-weight: 300;
 }
 
-ul {
+#navbar {
 	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/* background: var(--backdrop-3); */
+	/* box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4); */
+	z-index: 10;
 }
 
 li {
@@ -81,17 +91,22 @@ li {
 	margin-left: 50px;
 }
 
-li>a {
+.nav-list {
+	display: flex;
+	margin-right: 2rem;
+}
+
+.nav-link {
+	display: block;
 	font-size: 2.2rem;
+	padding: 2rem;
 	text-decoration: none;
 	color: var(--light-blue);
 
 }
-li>a:hover {
-	text-decoration: none;
+.nav-link:hover {
 	color: var(--dark-blue);
 	background: var(--light-blue);
-
 }
 
 .container {
@@ -126,7 +141,7 @@ li>a:hover {
 .content-box {
 	width: 44vw;
 	max-width: 100%;
-	height: auto;
+	height: 10rem;
 	display: block;
 	justify-self: center;
 	align-items: center;
@@ -143,11 +158,11 @@ li>a:hover {
 
 .recipe-link {
 	display: block;
-	height: 100%;
+	height: 9.4rem;
 	text-decoration: none;
 	text-align: center;
 	color: var(--light-blue);
-	padding: 15rem;
+	padding: 10px;
 }
 
 .recipe-link:hover {
@@ -179,9 +194,30 @@ li>a:hover {
 	grid-area: box4;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1000px) {
 	header {
+		flex-direction: column;
 		font-size: 1.2rem;
+		height: 12vh;
+	}
+	
+	h1 {
+		align-self: flex-start;
+		width: 25vw;
+	}
+
+	ul {
+		align-self: flex-end;
+		width: 50vw;
+	}
+
+	li {
+		margin: .1rem;
+		padding: .1rem;
+	}
+
+	.nav-link {
+		font-size: 1.5rem;
 	}
 
 	.container {
@@ -196,5 +232,6 @@ li>a:hover {
 
 	.content-box {
 		width: 75vw;
+		height: 10rem;
 	}
 }
