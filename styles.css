@@ -139,7 +139,7 @@ li {
 .content-box {
 	width: 46vw;
 	max-width: 100%;
-	height: 10rem;
+	height: 5rem;
 	display: block;
 	justify-self: center;
 	align-items: center;
@@ -156,7 +156,7 @@ li {
 
 .recipe-link {
 	display: block;
-	height: 9.4rem;
+	height: 4.5rem;
 	text-decoration: none;
 	text-align: center;
 	color: var(--light-blue);
