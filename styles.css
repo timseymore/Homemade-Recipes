@@ -192,6 +192,22 @@ li {
 	grid-area: box4;
 }
 
+#box5 {
+	grid-area: box5;
+}
+
+#box6 {
+	grid-area: box6;
+}
+
+#box7 {
+	grid-area: box7;
+}
+
+#box8 {
+	grid-area: box8;
+}
+
 @media (max-width: 1000px) {
 	header {
 		flex-direction: column;
@@ -224,7 +240,11 @@ li {
 			"box1"
 			"box2"
 			"box3"
-			"box4";
+			"box4"
+			"box5"
+			"box6"
+			"box7"
+			"box8";
 		margin: 1rem auto 1rem auto;
 	}
 
